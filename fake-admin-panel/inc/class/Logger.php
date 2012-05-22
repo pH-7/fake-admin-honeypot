@@ -8,7 +8,7 @@ class Logger extends Core {
 
     public function init(array $aData) {
         $this->fIp = Ip::get();
-        extract($_POST);
+        extract($aData);
 
         $this->sContents = t('[%0%] IP: %1% - LOGIN - Email: %2% - Username: %3% - Password: %4%', $this->dateTime->get()->dateTime(), $this->fIp, $mail, $username, $password) . "\n";
 
