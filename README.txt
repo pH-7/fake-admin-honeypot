@@ -7,6 +7,10 @@ More information here: http://en.wikipedia.org/wiki/Honeypot_(computing).
 
 P.S. The CMS includes already tracking analytics to have a trace of the attacker on your site.
 
+===== Requirements =====
+
+PHP 5.4.0 or newer.
+
 ===== Author =====
 
 Pierre-Henry Soria
