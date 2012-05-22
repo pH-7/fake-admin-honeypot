@@ -19,10 +19,10 @@ class LoginAdminForm {
         $oForm->addElement(new \PFBC\Element\Email(t('Your Email:'), 'mail', array('required' => 1, 'validation' => new \PFBC\Validation\Email )));
         $oForm->addElement(new \PFBC\Element\Textbox(t('Your Username:'), 'username', array('required' => 1 )));
         $oForm->addElement(new \PFBC\Element\Password(t('Your Password:'), 'password', array('required' => 1 )));
-        
-        if((new Session)->exists('captcha_admin_enabled')) 
+
+        if((new Session)->exists('captcha_admin_enabled'))
             $oForm->addElement(new \PFBC\Element\CCaptcha(t('Captcha:'), 'captcha', array ('description' => t('Enter the code above:'))));
-        
+
         $oForm->addElement(new \PFBC\Element\Button(t('Login'),'submit',array('icon'=>'key')));
         $oForm->render();
     }

@@ -8,7 +8,7 @@ class LoginAdminFormProcessing extends Form {
         parent::__construct();
 
         (new Logger)->init($_POST);
-        
+
         sleep(6); // Security against brute-force attack and this will irritate the hacker
         $this->session->set('captcha_admin_enabled', 1); // Enable Captcha
         \PFBC\Form::setError('form_admin_login', t('"Email", "Username" or "Password" is Incorrect'));
